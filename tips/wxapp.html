@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>微信富文本编译器组件 | mumu博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="超级通俗的个人博客">
+    
+    <link rel="preload" href="/mumu/assets/css/0.styles.5ae3cfb4.css" as="style"><link rel="preload" href="/mumu/assets/js/app.a038ac06.js" as="script"><link rel="preload" href="/mumu/assets/js/2.f7777874.js" as="script"><link rel="preload" href="/mumu/assets/js/13.1beae005.js" as="script"><link rel="prefetch" href="/mumu/assets/js/10.aaddcacd.js"><link rel="prefetch" href="/mumu/assets/js/11.b57a3410.js"><link rel="prefetch" href="/mumu/assets/js/12.e5fe2a35.js"><link rel="prefetch" href="/mumu/assets/js/3.82c2c001.js"><link rel="prefetch" href="/mumu/assets/js/4.e5362eb3.js"><link rel="prefetch" href="/mumu/assets/js/5.4e04916d.js"><link rel="prefetch" href="/mumu/assets/js/6.91b60684.js"><link rel="prefetch" href="/mumu/assets/js/7.467cbd0c.js"><link rel="prefetch" href="/mumu/assets/js/8.1f330007.js"><link rel="prefetch" href="/mumu/assets/js/9.e310ed13.js">
+    <link rel="stylesheet" href="/mumu/assets/css/0.styles.5ae3cfb4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mumu/" class="home-link router-link-active"><!----> <span class="site-name">mumu博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mumu/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/mumu/hcj/html.html" class="nav-link">
+  三剑客
+</a></div><div class="nav-item"><a href="/mumu/tips/vscode.html" class="nav-link">
+  技巧
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mumu/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/mumu/hcj/html.html" class="nav-link">
+  三剑客
+</a></div><div class="nav-item"><a href="/mumu/tips/vscode.html" class="nav-link">
+  技巧
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/mumu/tips/vscode.html" class="sidebar-link">vscode基本插件</a></li><li><a href="/mumu/tips/wxapp.html" aria-current="page" class="active sidebar-link">微信小程序</a><ul class="sidebar-sub-headers"></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="微信富文本编译器组件"><a href="#微信富文本编译器组件" class="header-anchor">#</a> 微信富文本编译器组件</h1> <h3 id="在比如微信原生小程序的时候-由于微信原生语法是wxml的语法不支持h和div等标签所以会引入一个富文本编译插件来解决这里以wxpaese举例"><a href="#在比如微信原生小程序的时候-由于微信原生语法是wxml的语法不支持h和div等标签所以会引入一个富文本编译插件来解决这里以wxpaese举例" class="header-anchor">#</a> 在比如微信原生小程序的时候，由于微信原生语法是WXML的语法不支持H和div等标签所以会引入一个富文本编译插件来解决这里以wxPaese举例</h3> <div class="language- extra-class"><pre class="language-text"><code>在app.wxss文件中引入样式
+@import &quot;/WxParse/WxParse.wxss&quot;
+
+在js中引入
+var WxParse= require('../../WxParse/WxParse.js');
+  onLoad(options) {
+  这里以cnodejs官网详情页内容请求返回的富文本举例
+  this.getDetailInfo(`https://cnodejs.org/api/v1/topic/${options.id}`)
+},
+async getDetailInfo(url, data) {
+  let result = await Allrequest(url, data)
+  let tempData = result.data
+  tempData.replies.forEach((item) =&gt; {
+
+    将H5的内容进行加工处理
+    let laber = item.content //这里是返回的html结构数据
+
+    评论区的内容：
+    参数1：是在wxml中绑定的数据标签，参数2：是编译对象的类型，参数3：是要编译的数据
+    参数4：一般写当前页面的this，参数5：是编译深度一般写5
+    let tempresult = WxPrase.wxParse('commentH5', 'html', laber, this, 5)
+    编译后的数据默认放在this.data[自定义的标签名]中，也可以赋值给新的属性
+    item.commentH5 = this.data.commentH5
+  })
+  this.setData({
+    detail: tempData,
+  })
+  编译作者写作的内容
+  WxPrase.wxParse('wxParseData', 'html', this.data.detail.content, this, 5)
+},
+
+  &lt;!-- 在需要的组件首上上引入WXML --&gt;
+在所需位置引入，将wxParseData的值设为自定义的数据标签名+nodes，即可完成微信小程序的富文本
+编译 
+&lt;import src=&quot;../../wxParse/wxParse.wxml&quot;/&gt;
+  &lt;!-- 文章内容 --&gt;
+&lt;template is=&quot;wxParse&quot; data=&quot;{{wxParseData:wxParseData.nodes}}&quot;  &gt;&lt;/template&gt;   
+  &lt;!-- 评论区 --&gt;
+&lt;view wx:for=&quot;{{detail.replies}}&quot; wx:key=&quot;id&quot; class=&quot;comment&quot;&gt;
+  &lt;view&gt;
+    &lt;template is=&quot;wxParse&quot; data=&quot;{{wxParseData:item.commentH5.nodes}}&quot; &gt;&lt;/template&gt; 
+  &lt;/view&gt;
+&lt;/view&gt;
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mumu/tips/vscode.html" class="prev">
+        vscode基本插件
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/mumu/assets/js/app.a038ac06.js" defer></script><script src="/mumu/assets/js/2.f7777874.js" defer></script><script src="/mumu/assets/js/13.1beae005.js" defer></script>
+  </body>
+</html>

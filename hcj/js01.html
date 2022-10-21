@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一、JavaScript基本使用 | mumu博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="超级通俗的个人博客">
+    
+    <link rel="preload" href="/mumu/assets/css/0.styles.5ae3cfb4.css" as="style"><link rel="preload" href="/mumu/assets/js/app.a038ac06.js" as="script"><link rel="preload" href="/mumu/assets/js/2.f7777874.js" as="script"><link rel="preload" href="/mumu/assets/js/3.82c2c001.js" as="script"><link rel="prefetch" href="/mumu/assets/js/10.aaddcacd.js"><link rel="prefetch" href="/mumu/assets/js/11.b57a3410.js"><link rel="prefetch" href="/mumu/assets/js/12.e5fe2a35.js"><link rel="prefetch" href="/mumu/assets/js/13.1beae005.js"><link rel="prefetch" href="/mumu/assets/js/4.e5362eb3.js"><link rel="prefetch" href="/mumu/assets/js/5.4e04916d.js"><link rel="prefetch" href="/mumu/assets/js/6.91b60684.js"><link rel="prefetch" href="/mumu/assets/js/7.467cbd0c.js"><link rel="prefetch" href="/mumu/assets/js/8.1f330007.js"><link rel="prefetch" href="/mumu/assets/js/9.e310ed13.js">
+    <link rel="stylesheet" href="/mumu/assets/css/0.styles.5ae3cfb4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mumu/" class="home-link router-link-active"><!----> <span class="site-name">mumu博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mumu/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/mumu/hcj/html.html" class="nav-link">
+  三剑客
+</a></div><div class="nav-item"><a href="/mumu/tips/vscode.html" class="nav-link">
+  技巧
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mumu/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/mumu/hcj/html.html" class="nav-link">
+  三剑客
+</a></div><div class="nav-item"><a href="/mumu/tips/vscode.html" class="nav-link">
+  技巧
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/mumu/hcj/html.html" class="sidebar-link">html</a></li><li><a href="/mumu/hcj/css.html" class="sidebar-link">css</a></li><li><a href="/mumu/hcj/js01.html" aria-current="page" class="active sidebar-link">javascript</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mumu/hcj/js01.html#一、javascript基本使用" class="sidebar-link">一、JavaScript基本使用</a></li><li class="sidebar-sub-header"><a href="/mumu/hcj/js01.html#二、javascript基础" class="sidebar-link">二、JavaScript基础</a></li></ul></li><li><a href="/mumu/hcj/vue2.html" class="sidebar-link">vue</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="一、javascript基本使用"><a href="#一、javascript基本使用" class="header-anchor">#</a> 一、JavaScript基本使用</h2> <h3 id="_1-javascript初体验"><a href="#_1-javascript初体验" class="header-anchor">#</a> 1. JavaScript初体验</h3> <ol><li><p>在 HTML 中，JavaScript 代码必须位于<code>&lt;script&gt;</code>与 <code>&lt;/script&gt;</code> 标签之间。</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+	<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'这是我们的第一个js代码'</span><span class="token punctuation">)</span>；
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>注释：旧的 JavaScript 例子也许会使用 type 属性：<code>&lt;script type=&quot;text/javascript&quot;&gt;</code>。</p> <p>注释：type 属性不是必需的。JavaScript 是 HTML 中的默认脚本语言。</p></li> <li><p><code>&lt;body&gt;</code>或者<code>&lt;head&gt;</code>中的JavaScript</p> <blockquote><p>脚本可被放置与 HTML 页面的<code>&lt;body&gt;</code> 或 <code>&lt;head&gt;</code>部分中，或兼而有之。</p></blockquote> <ul><li><p><code>&lt;body&gt;</code>中的JavaScript</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+      	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>body中的JavaScript<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span> 
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+               <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'body中的JavaScript'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>body 部分中的脚本: 当页面被加载时执行的脚本放在HTML的body部分。放在body部分的脚本通常被用来生成页面的内容。</p></li> <li><p><code>&lt;head&gt;</code>中的JavaScript</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+            <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'&lt;head&gt;中的JavaScript'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>head 部分中的脚本: 需调用才执行的脚本或事件触发执行的脚本放在HTML的head部分中。当你把脚本放在head部分中时，可以保证脚本在任何调用之前被加载。</p></li> <li><p>body 和 head 部分可同时有脚本:文件中可以在body和head部分同时存在脚本</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+      		<span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+      		<span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">222</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>思考：head和body中同时存在script文件会执行哪个？</p></li> <li><p>总结：js文件放到哪里更好？</p> <ul><li>浏览器对html页面内容的加载是顺序加载，也就是在html页面中前面先加载。当浏览器加载html文件并解析到<code>&lt;head&gt;</code>时,<code>&lt;body&gt;</code>并没有被解析,浏览器会等到<code>&lt;head&gt;</code>中的js部分执行完再加载页面。</li> <li>如果把javascript放在head里的话，则先被解析,但这时候body还没有解析。（常规html结构都是head在前，body在后）如果head的js代码是需要传入一个参数（在body中调用该方法时，才会传入参数），并需调用该参数进行一系列的操作，那么这时候肯定就会报错，因为函数该参数未定undefined</li> <li>从JavaScript对页面下载性能方向考虑：由于脚本会阻塞其他资源的下载（如图片等）和页面渲染，直到脚本全部下载并执行完成后，页面的渲染才会继续，因此推荐将所有的<code>&lt;script&gt;</code>标签尽可能放到<code>&lt;body&gt;</code>标签的底部，以尽量减少对整个页面下载的影响。</li></ul></li></ul></li> <li><p>引入外部脚本文件</p> <ul><li>JS程序不仅可以直接写在HTML文档中，也可以放在JavaScript文件中。后缀名是.js。使用任何文本编辑器都可以编辑。</li> <li>JS文件不能够单独运行，需要使用 <code>&lt;script&gt;</code>标签导入到网页中。</li> <li>定义src属性的<code>&lt;script&gt;</code>标签不应该再含有JavaScript代码，否则只会下载并执行外部JavaScript文件，嵌入代码被忽略。</li></ul> <div class="language-html extra-class"><pre class="language-html"><code>1）创建一个js文件，名称为first.js
+2) 引入js文件
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>first.js<span class="token punctuation">'</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>注意：在外部文件中放置脚本有如下优势：</p> <ul><li>分离了 HTML 和js代码</li> <li>使 HTML 和 JavaScript 更易于阅读和维护</li> <li>已缓存的 JavaScript 文件可加速页面加载</li></ul> <p>思考：内部js代码和外部引用哪个优先级更高？</p></li> <li><p>延迟执行JS-defer</p> <ul><li><code>&lt;script&gt;</code>标签有一个布尔型属性defer，这个属性的用途是表明脚本在执行时不会影响页面的构造，也就是说，脚本会被延迟到整个页面都解析完成后再运行。</li> <li>因此在script元素中设置defer属性，相当于告诉浏览器立即下载，但是延迟执行</li> <li>如果页面中有多个延迟脚本，那么第一个延迟脚本会先于第二个延迟脚本执行</li> <li>适用于外部JS文件，不适用于script标签包含的脚本</li></ul> <div class="language-html extra-class"><pre class="language-html"><code>1）创建一个js文件，名称为first.js
+2) 引入js延迟文件
+  <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>./first.js<span class="token punctuation">&quot;</span></span> <span class="token attr-name">defer</span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+                <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;head引入js&quot;</span><span class="token punctuation">)</span>
+            </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+                <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;body末尾引入js&quot;</span><span class="token punctuation">)</span>
+            </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></li> <li><p>异步加载JS文件-async</p> <ul><li><p>在默认情况下，网页都是同步加载外部 JavaScript文件的，在引入外部js文件时会阻塞dom的执行，为此在html4.01为script标签引入了async属性</p></li> <li><p>现在可以为<code>&lt;script&gt;</code>标签设置 async属性，让浏览器异步加载 Javascript文件，即表示应该立即下载脚本，但不应妨碍页面汇总的其它操作。只对外部脚本文件有效。</p></li> <li><p>因为是下载完立即执行，不能保证多个加载时的先后顺序，因此确保异步脚本之间互不依赖</p> <div class="language-html extra-class"><pre class="language-html"><code>1）创建一个js文件，名称为first.js
+2）引入js文件
+    <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>a.js<span class="token punctuation">&quot;</span></span> <span class="token attr-name">async</span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+           这是测试async的小案例，一jiao wulijiaojiao
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></li></ul></li> <li><p>扩展：async&amp;defer</p> <ul><li><p>没有设置任何属性的script</p> <p>HTML文件将被解析，直到脚本文件被下载为止，同时将停止解析，发起请求去提取script文件（如果是外部文件）。下载并执行完成后将在恢复解析HTML。</p> <p><img src="data:image/png;base64,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97bJpAgApBt7VAGgBMUVqbhCGlc/s/HH4iqWD+6v9+WVWg8TCgL6/uuvv7Z33nkn814Krn/7299szZo1tnXrVjty5Mg1fycUh7hi7+2hpuf48zSBIZs3b7b//Oc/dvjw4Uwb3bdvn82ZM8eOHj2atQrv1Oa2bdtm27dvD8H2Wp/r/59gUgQA0o+KKgCUoHggrsG7wuDx48etR48emRCqIKDB/alTp6xJkybWs2dPa9u2bXh8z5499te//tX+97//ZX3/ZGDQ5+k9pk+fbn379rWdO3faypUr7cSJE+EzFEQ8lNx///22YsUK69q1q3355ZchWDz11FPWvHnzAv3XQCF5W9AERGVlpZ07d866d+8e7tPffNeuXbZ79+5QRdffuFevXtayZctMxVV//71799qmTZvszjvvzNyndql2MnLkyKsmQWJqq//4xz+sf//+1qhRI/v3v/9tq1evvup5LVq0sIcfftjGjBlT2P8gAIC8IKgCQAmKl+9qWaUC56effmovvvhiGPDPnTvXvvjiizCw15LckydP2oEDB+yJJ56wsWPHWuvWre0nP/lJCAseDhR4V61aZcuWLbMnn3zS2rdvH+73CpUqqB06dAjLNPW+zZo1C5+l9xeFFD2nQYMGmaXA48aNs88//zwE23vuuYdKVxHyv9np06dDVVR/S01YqO288cYbYaKicePGYQmvgqwC69SpU0MAVZvSz1VVVWFSQ7eqoOo1W7ZsCZMpanO6VXvq2LFjaEe+VF3P/fvf/x5C6LBhw8Jj9913n/Xp0+eKpciiz+/cuTN7VAGgSBBUAaBExUt9z5w5YwcPHgw/b9iwIVQ7hwwZYoMGDQoDeAVVBQJVpu666y674447rFOnTpn3EQVevYdCh6qh3bp1y/q5CiyqkOmzGjZsmNl3qICqoKrlvgoYCiLSqlUrO3bsWPgd9d4oPr4/We1IYVQBVNVQVUknTpwYqvX62+vvrImO1157LVTeFWa1vFftUd+rrY4fPz78rCqsguvy5cszEx6PP/54CKV6niZWZs2aFT77oYceCu+v99CqAbXNbCdYaxIFAFAc6LEBoI7wQbvCppZnakCvpZYawCtYqFq1fv36TGCoiZZaasmuQmibNm2uWJKpW723wqiWGiu0Krz07t07hFeFCQUa/S56jle89BotHUVp0N9VQVN/b7UxtTUPswqa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" alt="03"></p></li> <li><p>设置了defer属性</p> <p>设置defer属性会在HTML解析的同时下载script，并在完成HTML解析和script下载之后执行该文件，同时设置了defer的脚本会按照他们在文档里面出现的顺序执行。</p> <p><img src="data:image/png;base64,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" alt="04"></p></li> <li><p>设置了async属性</p> <p>设置async属性会在HTML解析期间下载script文件，并在完成下载后暂停HTML解析器以执行该文件。</p> <p><img src="data:image/png;base64,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" alt="05"></p></li></ul></li></ol> <h2 id="二、javascript基础"><a href="#二、javascript基础" class="header-anchor">#</a> 二、JavaScript基础</h2> <h3 id="基本数据类型"><a href="#基本数据类型" class="header-anchor">#</a> 基本数据类型：</h3> <p>字符串 String</p> <p>数值 Number</p> <p>布尔 boolean</p> <p>null</p> <p>undefined</p> <p>对象</p> <p>数组</p> <h3 id="ajax"><a href="#ajax" class="header-anchor">#</a> Ajax</h3> <p>一个完整的 AJAX 请求包括五个步骤：</p> <p>1.创建 XMLHTTPRequest 对象</p> <p>2.使用 open 方法创建 http 请求，并设置请求地址 3.xhr.open（get/post，url，async，true（异步），false（同步））</p> <p>4.使用前三个参数 设置发送的数据用 send 发送请求</p> <p>5.注册事件（给 ajax 设置事件）</p> <p>6.获取响应并更新页面</p> <div class="language- extra-class"><pre class="language-text"><code>function ajax(url) {
+return new Promise((resolve, reject) =&gt; {
+// 创建一个XHR对象
+const xhr = new XMLHttpRequest()
+// 初始化一个异步请求(还没发请求)
+xhr.open('GET', url, true)
+xhr.onreadystatechange = function () {
+/*
+ajax引擎得到响应数据后
+将xhr的readyState属性指定为4
+将响应数据保存在response / responseText属性上
+调用此回调函数
+*/
+// 如果状态值不为4, 直接结束(请求还没有结束)
+if (xhr.readyState !== 4) {
+return
+}
+// 如果响应码在200~~299之间, 说明请求都是成功的
+if (xhr.status&gt;=200 &amp;&amp; xhr.status&lt;300) {
+// 指定promise成功及结果值
+resolve(JSON.parse(xhr.responseText))
+} else { // 请求失败了
+// 指定promise失败及结果值
+reject(new Error('request error staus '+ request.status))
+}
+}
+xhr.send(null)
+})
+}
+/*
+xhr + promise 封装一个异步ajax请求的通用函数 加强版
+返回值: promise
+参数为配置对象
+url: 请求地址
+params: 包含所有query请求参数的对象
+data: 包含所有请求体参数数据的对象
+method: 为请求方式
+*/
+function axios({url, params={}, data={}, method='GET'}) {
+// 返回一个promise对象
+return new Promise((resolve, reject) =&gt; {
+// 创建一个XHR对象
+const request = new XMLHttpRequest()
+// 根据params拼接query参数
+let queryStr = Object.keys(params).reduce((pre, key) =&gt; {
+pre += `&amp;${key}=${params[key]}`
+return pre
+}, '')
+if (queryStr.length&gt;0) {
+queryStr = queryStr.substring(1)
+url += '?' + queryStr
+}
+// 请求方式转换为大写
+method = method.toUpperCase()
+// 初始化一个异步请求(还没发请求)
+request.open(method, url, true)
+// 绑定请求状态改变的监听
+request.onreadystatechange = function () {
+// 如果状态值不为4, 直接结束(请求还没有结束)
+if (request.readyState !== 4) {
+return
+}
+// 如果响应码在200~~299之间, 说明请求都是成功的
+if (request.status&gt;=200 &amp;&amp; request.status&lt;300) {
+// 准备响应数据对象
+const responseData = {
+4) 跨域
+什么是跨域(同源策略)
+JSONP
+CORS
+代理服务器
+5) 同源策略
+同源: 协议, 域名, 端口, 三者都相同
+ajax请求时, 浏览器要求当前网页和Server必须同源(安全), 否则会抛出跨域的错误
+加载image/link/script不受同源策略限制
+6) JSONP原理
+前台:
+接收响应数据的函数: function fn (data) {}
+后台
+处理请求, 产生需要返回的数据data
+读取callback请求参数得到前台处理响应数据的函数名fn
+data: JSON.parse(request.response),
+status: request.status,
+statusText: request.statusText
+}
+// 指定promise成功及结果值
+resolve(responseData)
+} else { // 请求失败了
+// 指定promise失败及结果值
+const error = new Error('request error staus '+ request.status)
+reject(error)
+}
+}
+// 如果是post/put请求
+if (method==='POST' || method==='PUT' || method==='DELETE') {
+// 设置请求头: 使请求体参数以json形式传递
+request.setRequestHeader('Content-Type', 'application/json;charset=utf-8')
+// 包含所有请求参数的对象转换为json格式
+const dataJson = JSON.stringify(data)
+// 发送请求, 指定请求体数据
+request.send(dataJson)
+} else {// GET请求
+// 发送请求
+request.send(null)
+}
+})
+}
+
+</code></pre></div><h3 id="使用axios发送ajax请求"><a href="#使用axios发送ajax请求" class="header-anchor">#</a> 使用axios发送ajax请求</h3> <div class="language- extra-class"><pre class="language-text"><code>axios(url)
+axios({
+method: '',
+url: '', // 如果有params参数必须拼接在url中
+params: {}, // query参数 如何携带params参数? 只能拼接在url上
+data: {} // 请求体参数
+})
+axios.get(url, {配置}) get(url, {params: {username: 'xxx'}})
+axios.post(url, data, {配置})
+axios.put(url, data, {配置})
+axios.delete(url, {配置})
+// 返回的是一个函数 ==&gt; 函数的功能与axios类似
+// service与axios的配置不太一样, 而且可以根据需要产生多个
+const service = axios.create({
+baseURL: '/api',
+timeout: 20000,
+})
+service.interceptors.request.use((config) =&gt; {
+// 添加请求头
+config.headers['token'] = token值
+return config // 必须返回config
+})
+// 根据config使用xhr发送ajax请求
+new Promise((resolve, reject) =&gt; {
+xhr.send()
+成功了, resolve(respnose)
+失败了, reject(error)
+})
+service.interceptors.response.use(
+response =&gt; {
+// return response
+return response.data
+},
+error =&gt; {
+throw error
+}
+)
+service({}).then(data =&gt; {
+}).catch(error =&gt; {
+})
+// 利用Promise的then的链式调用来串联这些任务的
+请求拦截器的回调函数
+xhr发请求
+响应拦截器成功/失败的回调
+具体请求成功/失败的回调
+Promise.resolve(config)
+.then(config =&gt; {
+//...
+return config
+})
+.then(config =&gt; {
+return new Promise((resolve, reject) =&gt; {
+// 根据config使用xhr发送ajax请求
+xhr.send()
+成功了, resolve(respnose)
+失败了, reject(error)
+})
+})
+.then(
+response =&gt; {
+// return response
+return response.data
+},
+error =&gt; {
+throw error
+}
+)
+.then(
+data =&gt; {},
+error =&gt; {}
+)
+Promise.resolve(config)
+.then((config) =&gt; { // 请求拦截器成功回调
+// 添加请求头
+config.headers['token'] = token值
+// return config // 必须返回config
+})
+.then((config) =&gt; { // 用来发ajax的回调
+return new Promise((resolve, reject) =&gt; {
+xhr.send()
+// 根据config使用xhr发请求, 封闭响应相关数据response
+resolve(response)
+// 请求失败
+reject(error)
+})
+})
+.then( // 响应拦截器
+10) axios二次封装
+1. 配置通用的基础路径和超时
+2. 显示请求进度条
+1. 显示进度条: 请求拦截器回调
+2. 结束进度条: 响应拦截器回调
+3. 成功返回的数据不再是response, 而直接是响应体数据response.data
+4. 统一处理请求错误, 具体请求也可以选择处理或不处理
+5. 每个请求自动携带userTempId的请求头: 在请求拦截器中实现
+6. 如果当前有token, 自动携带token的请求头
+7. 对token过期的错误进行处理
+mport axios from 'axios'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+import store from '@/store'
+import router from '@/router'
+NProgress.configure({ showSpinner: false }) // 隐藏右侧的旋转进度条
+// 创建instance
+const instance = axios.create({
+// baseURL: 'http://182.92.128.115/api',
+baseURL: '/api',
+timeout: 20000
+})
+// 指定请求拦截器
+instance.interceptors.request.use(config =&gt; {
+// 显示进度条: 请求拦截器回调
+NProgress.start()
+/* 每个请求自动携带userTempId的请求头: 在请求拦截器中实现 */
+const userTempId = store.state.user.userTempId
+config.headers.userTempId = userTempId
+/* 6. 如果当前有token, 自动携带token的请求头 */
+const token = store.state.user.token
+if (token) {
+config.headers.token = token
+}
+return config // 必须返回config
+11) Restless API 与 Restful API
+Restless API 
+传统的API, 把每个url当作一个功能操作 /deleteUser
+同一个url, 后台只进行CRUD的某一种操作
+请求方式不决定请求的CRUD操作
+})
+// 指定响应拦截器
+instance.interceptors.response.use(
+response =&gt; { // 成功的回调
+// 结束进度条: 响应拦截器回调
+NProgress.done()
+// 成功返回的数据不再是response, 而直接是响应体数据response.data
+return response.data
+},
+async error =&gt; { // 失败的回调
+// 结束进度条: 响应拦截器回调
+NProgress.done()
+// 统一处理请求错误, 具体请求也可以选择处理或不处理
+// alert('请求出错: ' + error.message||'未知错误')
+// 取出响应对象
+const { response } = error
+// 如果是请求处理出错
+if (response &amp;&amp; response.status) {
+// 401说明token非法
+if (response.status === 401) {
+// 如果当前没在登陆页
+if (router.currentRoute.path!=='/login') {
+// 分发action去清除用户token信息
+await store.dispatch('logout')
+// 跳转到登陆页面
+router.replace('/login')
+// 提示
+message.error('登陆已过期, 请重新登陆')
+}
+} else {
+message.error('请求出错: ' + error.message||'未知错误')
+}
+} else if (!response) { // 网络连接不上服务器
+message.error('您的网络发生异常，无法连接服务器')
+}
+// throw error
+return Promise.reject(error) // 将错误向下传递
+}
+)
+// 向外暴露instance
+export default instance
+</code></pre></div><h3 id="判断一个数据是否为nan"><a href="#判断一个数据是否为nan" class="header-anchor">#</a> 判断一个数据是否为NaN</h3> <p>NaN 非数字 但是用 typeof 检测是 number 类型</p> <p>isnan 利用 NaN 是唯一一个不等于任何自身的特点 n！==n</p> <p>利用 ES6 中提供的 Object.is()方法（判断两个值是否相等） n==nan</p> <p>Js 中 null 与 undefined 区别</p> <p>相同点：用 if 判断时，两者都会被转换成 false</p> <p>不同点： number 转换的值不同 number（null）为 0</p> <p>​				 number（undefined） 为 NaN</p> <p>Null 表示一个值被定义了，但是这个值是空值 Undefined 变量声明但未赋值</p> <h3 id="闭包是什么"><a href="#闭包是什么" class="header-anchor">#</a> 闭包是什么？</h3> <p>闭包可以简单理解成：定义在一个函数内部的函数。其中一个内部函数 在包含它们的外部函数之外被调用时，就会形成闭包。</p> <p>特点：</p> <p>​		 1.函数嵌套函数。</p> <p>​		 2.函数内部可以引用外部的参数和变量。</p> <p>​		 3.参数和变量不会被垃圾回收机制回收。</p> <p>优点： 1:变量长期驻扎在内存中； 2:避免全局变量的污染； 3:私有成员的存在 ；</p> <p>缺点：会造成内存泄露</p> <h3 id="js-中常见的内存泄漏"><a href="#js-中常见的内存泄漏" class="header-anchor">#</a> Js 中常见的内存泄漏</h3> <p>1.意外的全局变量 var</p> <p>2.被遗忘的计时器或回调函数setTimeout</p> <p>3.脱离 DOM 的引用（使用监听器后要移除监听器 ）</p> <p>4.闭包</p> <h3 id="js垃圾回收机制"><a href="#js垃圾回收机制" class="header-anchor">#</a> js垃圾回收机制</h3> <p>1.引用技术垃圾回收机制</p> <p>如果一个对象的引用地址值为null，则会被回收，但是这种方法会有一个问题就是相互引用</p> <div class="language- extra-class"><pre class="language-text"><code>function(){
+var temp1 = {a:temp2} 
+var temp2 = {a:temp1}
+}
+//首先函数定义的时候，理论上temp1没有人调用{a:temp2} 按道理要被清除，但是temp1被temp2的a调用了，这时候
+如果使用了标记清除的话就需要判断a是否为能够通过window或者顶级对象的点（.）找到，找到不到就会被清除
+</code></pre></div><p>像上面这种情况下没法回收。</p> <p>2.标记清除法</p> <p>简单理解就是变量一定是被顶级对象作用域中，如果存在一个变量的上下文不在顶级作用域中就会被清除</p> <h3 id="事件委派-委托-事件冒泡"><a href="#事件委派-委托-事件冒泡" class="header-anchor">#</a> 事件委派/委托/事件冒泡</h3> <p>事件委派的原理就是子元素的事件被触发后，同事会触发父元素的事件，从而将子元素需要触发的函数交给父元素</p> <p>让父元素去触发这样就能减少事件的定义</p> <p>（子元素在父元素内部，例如点击事件，点击子元素，一定是点击在父元素内部的，即父元素一定也是被点击了）</p> <h3 id="阻止事件冒泡"><a href="#阻止事件冒泡" class="header-anchor">#</a> 阻止事件冒泡</h3> <p>1event.stopPropagation()  该方法会阻止冒泡，但是不阻止默认事件执行，因此a标签的链接还是会被打开</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;a href=&quot;https://www.mumu110.top/&quot; class=&quot;box&quot;&gt;
+	&lt;button class=&quot;btn&quot;&gt;按钮&lt;/button&gt;
+&lt;/a&gt;
+
+$('.btn').click(function (event) {
+		even.stopPropagation();
+		event.preventDefault()
+		alert('按钮被点击了');
+	})
+</code></pre></div><p>2.event.preventDefault() 该方法能阻止默认行为事件的执行，但是不阻止事件冒泡</p> <p>3.return false  在事件的回调函数中return false可以阻止事件冒泡以及默认行为（该方法很暴力，但是我很喜欢）</p> <h3 id="本地存储与cokie"><a href="#本地存储与cokie" class="header-anchor">#</a> 本地存储与cokie</h3> <p>cookie 确实非常小，它的大小限 制为 4KB 左右。它的主要用途有保存登录信息，比如你登录某个网站市 场可以看到“记住密码”，这通常就是通过在 Cookie 中存入一段辨别用 户身份的数据来实现的。</p> <p>一般被放在请求头中会保存服务器响应的sessionId，同时也是会跟随请求自动发送</p> <p>localStorage localStorage 本地永久化存储，不会在浏览器关闭时被清除，除非手动清除</p> <p>sessionStorage 本地临时存储，会在浏览器关闭时被清除</p> <h3 id="数组常用方法"><a href="#数组常用方法" class="header-anchor">#</a> 数组常用方法</h3> <p>push() 从后面添加元素，返回值为添加完后的数组的长度</p> <p>arr.pop() 从后面删除元素，只能是一个，返回值是删除的元素</p> <p>arr.shift() 从前面删除元素，只能删除一个 返回值是删除的元素</p> <p>arr.unshift() 从前面添加元素, 返回值是添加完后的数组的长度</p> <p>arr.splice(i,n) 删除从 i(索引值)开始之后的那个元素。返回值是删除的元素</p> <p>arr.concat() 连接两个数组 返回值为连接后的新数组</p> <p>str.split() 将字符串转化为数组</p> <p>arr.sort() 将数组进行排序,返回值是排好的数组，默认是按照最左边的数 字进行排序，不是按照数字大小排序的 <strong>（可以试试sort的回调形式的使用，单纯的使用要求数组内的元素位数相同或者编码顺序符合预期）</strong></p> <p>arr.reverse() 将数组反转,返回值是反转后的数组</p> <p>arr.slice(start,end) 切去索引值 start 到索引值 end 的数组，不包含 end 索引的值，返回值是切出来的数组</p> <p>arr.forEach(callback) 遍历数组,无 return 即使有 return，也不会返回 任何值，并且会影响原来的数组</p> <p>arr.map(callback) 映射数组(遍历数组),有 return 返回一个新数组 。</p> <p>arr.filter(callback) 过滤数组，返回一个满足要求的数组</p> <h3 id="对象的三大特性"><a href="#对象的三大特性" class="header-anchor">#</a> 对象的三大特性</h3> <p>封装，继承，多态</p> <h3 id="promise"><a href="#promise" class="header-anchor">#</a> promise</h3> <p>遇到一个面试官把promis说成期约，我英语不好，当时不知道后来查了才知道，然后背后我骂了他好几天，说期约，脑子被踢了吧！谁敲代码的时候用到期约这两个字了！问promise就好好说话，说什么期约。博客写到这的时候我又骂了一顿，技术问题就问技术问题，搞成英语考试有什么意思。</p> <h3 id="从输入url到渲染出页面的整个过程"><a href="#从输入url到渲染出页面的整个过程" class="header-anchor">#</a> 从输入url到渲染出页面的整个过程</h3> <p>1.DNS解析域名成ip地址</p> <p>​	这个dns解析也是通过缓存来查找ip的，从浏览器dns&gt;计算机的dns&gt;路由器的dns&gt;运营商的dns</p> <p>2.建立tcp链接（三次握手）</p> <p>​	客户端发送服务端：我准备好了，请你准备一下 SNY=1，seq=x</p> <p>​	服务端发送客户端：我也准备好了，请你确认一下 SNY=1，ack=x+1，seq=y</p> <p>​	客户端发送服务端：确认完毕 SNY=1，ack=y+1，seq=x+1</p> <p>3.发送请求（请求头/请求行/请求体/）</p> <p>​	发送请求报文（data）</p> <p>4.返回响应（响应头/响应行/响应体）</p> <p>​	返回响应报文</p> <p>5.解析渲染页面</p> <p>​	遇到 HTML，调用 HTML 解析器，解析成 DOM 树</p> <p>​	遇到 CSS，调用 CSS 解析器，解析成 CSSOM 树</p> <p>​	遇到 JS，调用 JS 解析器（JS 引擎），解析 JS 代码</p> <p>​		1.可能要修改元素节点，重新调用 HTML 解析器，解析更新DOM 树</p> <p>​		2.可能要修改样式节点，重新调用 CSS 解析器，解析更新 CSSOM 树</p> <p>​	将 DOM + CSSOM = Render Tree（渲染树）</p> <p>layout 布局：计算元素的位置和大小信息</p> <p>render 渲染：将颜色/文字/图片等渲染上去</p> <ol start="6"><li>断开链接：TCP 四次挥手</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mumu/hcj/css.html" class="prev">
+        css
+      </a></span> <span class="next"><a href="/mumu/hcj/vue2.html">
+        vue
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/mumu/assets/js/app.a038ac06.js" defer></script><script src="/mumu/assets/js/2.f7777874.js" defer></script><script src="/mumu/assets/js/3.82c2c001.js" defer></script>
+  </body>
+</html>

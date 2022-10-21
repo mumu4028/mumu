@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Px，rem，em 的区别 | mumu博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="超级通俗的个人博客">
+    
+    <link rel="preload" href="/mumu/assets/css/0.styles.5ae3cfb4.css" as="style"><link rel="preload" href="/mumu/assets/js/app.a038ac06.js" as="script"><link rel="preload" href="/mumu/assets/js/2.f7777874.js" as="script"><link rel="preload" href="/mumu/assets/js/9.e310ed13.js" as="script"><link rel="prefetch" href="/mumu/assets/js/10.aaddcacd.js"><link rel="prefetch" href="/mumu/assets/js/11.b57a3410.js"><link rel="prefetch" href="/mumu/assets/js/12.e5fe2a35.js"><link rel="prefetch" href="/mumu/assets/js/13.1beae005.js"><link rel="prefetch" href="/mumu/assets/js/3.82c2c001.js"><link rel="prefetch" href="/mumu/assets/js/4.e5362eb3.js"><link rel="prefetch" href="/mumu/assets/js/5.4e04916d.js"><link rel="prefetch" href="/mumu/assets/js/6.91b60684.js"><link rel="prefetch" href="/mumu/assets/js/7.467cbd0c.js"><link rel="prefetch" href="/mumu/assets/js/8.1f330007.js">
+    <link rel="stylesheet" href="/mumu/assets/css/0.styles.5ae3cfb4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mumu/" class="home-link router-link-active"><!----> <span class="site-name">mumu博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mumu/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/mumu/hcj/html.html" class="nav-link">
+  三剑客
+</a></div><div class="nav-item"><a href="/mumu/tips/vscode.html" class="nav-link">
+  技巧
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mumu/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/mumu/hcj/html.html" class="nav-link">
+  三剑客
+</a></div><div class="nav-item"><a href="/mumu/tips/vscode.html" class="nav-link">
+  技巧
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/mumu/hcj/html.html" class="sidebar-link">html</a></li><li><a href="/mumu/hcj/css.html" aria-current="page" class="active sidebar-link">css</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mumu/hcj/css.html#px-rem-em-的区别" class="sidebar-link">Px，rem，em 的区别</a></li><li class="sidebar-sub-header"><a href="/mumu/hcj/css.html#三栏布局方式两边固定中间自适应" class="sidebar-link">三栏布局方式两边固定中间自适应</a></li><li class="sidebar-sub-header"><a href="/mumu/hcj/css.html#双边距重叠问题-外边距折叠" class="sidebar-link">双边距重叠问题（外边距折叠）</a></li><li class="sidebar-sub-header"><a href="/mumu/hcj/css.html#css-选择器有哪些-优先级" class="sidebar-link">CSS 选择器有哪些，优先级</a></li><li class="sidebar-sub-header"><a href="/mumu/hcj/css.html#css-动画" class="sidebar-link">css 动画</a></li><li class="sidebar-sub-header"><a href="/mumu/hcj/css.html#元素的垂直居中" class="sidebar-link">元素的垂直居中</a></li><li class="sidebar-sub-header"><a href="/mumu/hcj/css.html#文本溢出" class="sidebar-link">文本溢出</a></li><li class="sidebar-sub-header"><a href="/mumu/hcj/css.html#定位" class="sidebar-link">定位</a></li></ul></li><li><a href="/mumu/hcj/js01.html" class="sidebar-link">javascript</a></li><li><a href="/mumu/hcj/vue2.html" class="sidebar-link">vue</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="px-rem-em-的区别"><a href="#px-rem-em-的区别" class="header-anchor">#</a> Px，rem，em 的区别</h2> <p>Px，绝对长度单位，像素 px 是相对于显示器屏幕分辨率来说的</p> <p>em 相对长度单位，相对于当前对象内文本的字体尺寸 em 的值并不是固定的 em 会继承父级元素的字体大小（参考物是父元素的 font-size） em 中所有的字体都是相对于父元素的大小决定的</p> <p>rem 相对于 html 根元素的 font-size 1em=1rem=16px 在 body 中加入 font-size：62.5% 这样直接就是原 来的 px 数值除以 10 加上 em</p> <p>Rem 缺点:</p> <p>小说网站，屏幕越小的移动设备如果用了 rem 肯定文字就越小， 就会导致看文章的时候特别费眼</p> <h2 id="三栏布局方式两边固定中间自适应"><a href="#三栏布局方式两边固定中间自适应" class="header-anchor">#</a> 三栏布局方式两边固定中间自适应</h2> <p>1.margin 负值法：左右两栏均左浮动，左右两栏采用负的 margin 值。 中间栏被宽度为 100%的浮动元素包起来</p> <p>2.自身浮动法：左栏左浮动，右栏右浮动，中间栏放最后</p> <p>3.绝对定位法：左右两栏采用绝对定位，分别固定于页面的左右两侧，中间的主体栏用左右 margin 值撑开距离。</p> <p>4.flex 左右固定宽 中间 flex：1</p> <p>5.网格布局</p> <p>6.table 布局</p> <h2 id="双边距重叠问题-外边距折叠"><a href="#双边距重叠问题-外边距折叠" class="header-anchor">#</a> 双边距重叠问题（外边距折叠）</h2> <p>多个相邻（兄弟或者父子关系）普通流的块元素<u>垂直方向</u> marigin 会重叠折叠的结果为：</p> <p>两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。</p> <p>两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。</p> <p>两个外边距一正一负时，折叠结果是两者的相加的和。</p> <h2 id="css-选择器有哪些-优先级"><a href="#css-选择器有哪些-优先级" class="header-anchor">#</a> CSS 选择器有哪些，优先级</h2> <p>id 选择器，class 选择器，标签选择器，伪元素选择器，伪类选择器等 同一元素引用了多个样式时，排在后面的样式属性的优先级高；</p> <p>带有!important 标记的样式属性的优先级最高； 样式表的来源不同时，优先级顺序为：内联样式&gt; 内部样式 &gt; 外部 样式 &gt; 浏览器用户自定义样式 &gt; 浏览器默认样式</p> <p>继承没有优先级</p> <h2 id="css-动画"><a href="#css-动画" class="header-anchor">#</a> css 动画</h2> <p>创建动画序列，需要使用 animation 属性或其子属性，该属性允许配置 动画时间、时长以及其他动画细节，但该属性不能配置动画的实际表现，动画的实际表现是由@keyframes 规则实现，具体情况参见使用 keyframes 定义动画序列小节部分。</p> <p>transition 也可实现动画。 transition 强调过渡，是元素的一个或多个属性发生变化时产生的过渡效果，同一个元素通过两个不同的途径获取样式，而第二个途径当某种 改变发生 （例如 hover）时才能获取样式，这样就会产生过渡动画</p> <h2 id="元素的垂直居中"><a href="#元素的垂直居中" class="header-anchor">#</a> 元素的垂直居中</h2> <p>1.父元素 display:flex,align-items:center;</p> <p>2.元素绝对定位，top:50%，margin-top：</p> <p>3.元素绝对定位，top:50%，用 transform： translateY（-50%）</p> <p>4.父元素 table 布局，子元素设置 vertical-align:center（不考虑使用table布局）</p> <h2 id="文本溢出"><a href="#文本溢出" class="header-anchor">#</a> 文本溢出</h2> <p>text-overflow 属性，值为 clip 是修剪文本；ellipsis 为显示省略 符号来表被修剪的文本； string 为使用给定的字符串来代表被修剪 的文本。</p> <p>单行文本：</p> <div class="language- extra-class"><pre class="language-text"><code>width: 100px;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+display: inherit;
+</code></pre></div><p>多行文本：</p> <div class="language- extra-class"><pre class="language-text"><code>width: 100px;
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3; //设置文本显示行数
+-webkit-box-orient: vertical;
+
+</code></pre></div><p>英文没有如我所愿，显示 3 行。因为英文是不会自动换行的，所以我们需要设置换行</p> <div class="language- extra-class"><pre class="language-text"><code>word-wrap: break-word; //允许长单词换行到下一行
+word-break: break-all; //允许在单词内换行
+</code></pre></div><p>如果需要兼容ie8，建议应用组件库</p> <p>HeyUI：https://www.heyui.top/component/other/textellipsis</p> <p>vue-text-ellipsis：https://github.com/Luobata/vue-text-ellipsis</p> <h2 id="定位"><a href="#定位" class="header-anchor">#</a> 定位</h2> <p>固定定位 fixed：</p> <p>元素的位置相对于浏览器窗口是固定位置，即使窗口是滚动的它也不 会移动。Fixed 定位使元素的位置与文档流无关，因此不占据空间。（表现为在屏幕固定位置显示）</p> <p>相对定位 relative：</p> <p>如果对一个元素进行相对定位，它将出现在它所在的位置上。然后， 可以通过设置垂直或水平位置，让这个元素“相对于”它的起点进行 移动。 在使用相对定位时，无论是否进行移动，元素仍然占据原来 的空间。因此，移动元素会导致它覆盖其它框。</p> <p>绝对定位 absolute： 绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已 定位的父元素，那么它的位置相对于。absolute 定位使元素 的位置与文档流无关，因此不占据空间。 absolute 定位的元素和其他元素重叠。</p> <p>粘性定位 sticky： 元素先按照普通文档流定位，然后相对于该元素在流中的 flow root （BFC）和 containing block（最近的块级祖先元素）定位。而后， 元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位（当滚动大于同top时会固定在top值的位置）、</p> <p>inherit: 规定应该从父元素继承 position 属性的值。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mumu/hcj/html.html" class="prev">
+        html
+      </a></span> <span class="next"><a href="/mumu/hcj/js01.html">
+        javascript
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/mumu/assets/js/app.a038ac06.js" defer></script><script src="/mumu/assets/js/2.f7777874.js" defer></script><script src="/mumu/assets/js/9.e310ed13.js" defer></script>
+  </body>
+</html>
